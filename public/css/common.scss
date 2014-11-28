@@ -1,0 +1,196 @@
+@import "_reset";
+@import "_tools";
+@import "_fonts";
+@import "_variables";
+
+/* Common (common styles) */
+body, input, textarea, select, button {
+	
+	font-family: Arial, sans-serif;
+}
+
+html {
+
+	height: auto;
+	min-height: 100%;
+}
+
+body {
+
+	@include BaseFont(14px, 20px);
+	height: 100%;
+	position: relative;
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+	background: transparent url('../i/background.jpg') no-repeat 50% 50%;
+	background-size: cover;
+
+}
+
+input, textarea, select, button {
+	
+	font-size: 1em;
+}
+
+/* Overrides extra padding in Firefox */ 
+button::-moz-focus-inner { 
+	
+	padding: 0; 
+	border: none;
+}
+
+/* Global (global styles) / prefix - g- */
+
+.g-pseudo-link {
+	
+	border-bottom: 1px dashed;
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+.g-limited {
+	
+	/* min-width, max-width */
+}
+
+.g-cleaner {
+	
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.g-cleared:after {
+	
+	display: block;
+	content: ".";
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.g-hidden {
+	
+	display: none !important;
+}
+
+.b-header-inside {
+
+	margin: 0 auto;
+	padding: 18px 40px 90px 20px;
+	width: 1024px;
+	min-height: 46px;
+}
+.b-megafon-logo,
+.b-rzd-logo{
+
+	float: left;
+	display: inline-block;
+	padding: 0 80px 0 0;
+	line-height: 40px;
+	img {
+
+		max-width: 100%;
+		vertical-align: middle;
+	}
+}
+.b-contacts-link {
+	
+	float: left;
+	@include PFDinDisplayPro(14px, 40px);
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.b-pages-title {
+	
+	display: block;
+	@include Font(0px, 0px);
+	text-indent: -9999px;
+}
+.b-controls-link {
+
+	position: relative;
+	float: right;
+	@include PFDinDisplayPro(22px, 40px);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	&:before {
+
+		position: absolute;
+		content: "";
+		top: 0;
+		left: -66px;
+		width: 46px;
+		height: 46px;
+		@include graphics(-80px, -8px);
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.b-article {
+	@include PFDinDisplayPro(14px, 16px);
+
+	&-inside {
+
+		@extend .b-header-inside;
+		padding: 0 0 0 300px;
+		box-sizing: border-box;
+
+	}
+	&-caption {
+
+		float: left;
+		position: relative;
+		padding: 0 0 37px 0;
+		@include Font(60px, 72px);
+		color: #fff;
+		&:before {
+
+			position: absolute;
+			content: "";
+			top: -30px;
+			left: -220px;
+			width: 160px;
+			height: 160px;
+			background-color: #482670;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		&:after {
+
+			position: absolute;
+			content: "";
+			top: 16px;
+			left: -174px;
+			width: 67px;
+			height: 67px;
+		}
+	}
+	&-link {
+
+		@include Font(22px, normal);
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #00B269;
+		&:hover {
+
+			text-decoration: underline;
+		}
+	}
+}
+.b-time-expired-article {
+	.b-article-caption:after {
+
+		@include graphics(-8px, -8px);
+	}
+}

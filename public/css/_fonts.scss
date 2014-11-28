@@ -1,0 +1,126 @@
+/* Fonts (including not standart fonts) */
+
+/*@font-face {
+	
+	font: {
+		family: "FontName";
+		weight: 100;
+		style: normal;
+	}
+	src: url("../fonts/FontName/regular.eot");
+	src: url("../fonts/FontName/regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/FontName/regular.woff") format("woff"),
+		 url("../fonts/FontName/regular.ttf") format("truetype");
+}
+
+@mixin FontNameRegular($font-size, $line-height) {
+
+	font-family: "FontName", Arial, sans-serif;
+	font-weight: 100;
+	font-size: $font-size;
+	line-height: $line-height;
+}*/
+
+
+@font-face {
+	
+	font: {
+		family: "PFDinDisplayPro";
+		weight: 400;
+		style: normal;
+	}
+	src: url("../fonts/PFDinDisplayPro/regular.eot");
+	src: url("../fonts/PFDinDisplayPro/regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/PFDinDisplayPro/regular.woff") format("woff"),
+		 url("../fonts/PFDinDisplayPro/regular.ttf") format("truetype"),
+		 url('../fonts/PFDinDisplayPro/regular.svg#Rotonda') format('svg');
+}
+
+@mixin PFDinDisplayPro($font-size, $line-height) {
+
+	font-family: "PFDinDisplayPro", Arial, sans-serif;
+	font-weight: 400;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@font-face {
+	
+	font: {
+		family: "PFDinDisplayPro";
+		weight: 700;
+		style: normal;
+	}
+	src: url("../fonts/PFDinDisplayPro/medium.eot");
+	src: url("../fonts/PFDinDisplayPro/medium.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/PFDinDisplayPro/medium.woff") format("woff"),
+		 url("../fonts/PFDinDisplayPro/medium.ttf") format("truetype"),
+		 url('../fonts/PFDinDisplayPro/medium.svg#Rotonda-Bold') format('svg');
+}
+
+@mixin PFDinDisplayPro-Medium($font-size, $line-height) {
+
+	font-family: "PFDinDisplayPro", Arial, sans-serif;
+	font-weight: 700;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@font-face {
+	
+	font: {
+		family: "PFDinDisplayPro";
+		weight: 200;
+		style: normal;
+	}
+	src: url("../fonts/PFDinDisplayPro/light.eot");
+	src: url("../fonts/PFDinDisplayPro/light.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/PFDinDisplayPro/light.woff") format("woff"),
+		 url("../fonts/PFDinDisplayPro/light.ttf") format("truetype"),
+		 url('../fonts/PFDinDisplayPro/light.svg#Rotonda-Bold') format('svg');
+}
+
+@mixin PFDinDisplayPro-Light($font-size, $line-height) {
+
+	font-family: "PFDinDisplayPro", Arial, sans-serif;
+	font-weight: 200;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@font-face {
+	
+	font: {
+		family: "PFDinDisplayPro";
+		weight: 100;
+		style: normal;
+	}
+	src: url("../fonts/PFDinDisplayPro/extra-thin.eot");
+	src: url("../fonts/PFDinDisplayPro/extra-thin.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/PFDinDisplayPro/extra-thin.woff") format("woff"),
+		 url("../fonts/PFDinDisplayPro/extra-thin.ttf") format("truetype"),
+		 url('../fonts/PFDinDisplayPro/extra-thin.svg#Rotonda-Bold') format('svg');
+}
+
+@mixin PFDinDisplayPro-ExtraThin($font-size, $line-height) {
+
+	font-family: "PFDinDisplayPro", Arial, sans-serif;
+	font-weight: 100;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin BaseFont($font-size, $line-height) {
+
+	font-family: "Helvetica", Arial, sans-serif;
+	font-weight: normal;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin Font($font-size, $line-height) {
+
+	font-size: $font-size;
+	line-height: $line-height;
+}
+

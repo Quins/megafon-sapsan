@@ -1,0 +1,25 @@
+{
+	"globals": {
+		"project": {
+			"title": "WiFi от Мегафон в Сапсане"
+		},
+		"navigation": {
+
+			"primary": [
+				{
+					"template": "time-expired",
+					"title": "Время подтверждения истекло"
+				},
+				{
+					"template": "not-money",
+					"title": "Недостаточно средств для оплаты"
+				}, 
+				{
+					"template": "404",
+					"title": "Ошибка"
+				}
+			]
+		}
+	},
+	"domains": []
+}
