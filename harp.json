@@ -6,10 +6,6 @@
 		"navigation": {
 
 			"primary": [
-			{
-					"template": "index",
-					"title": "Навигатор по страницам"
-				},
 				{
 					"template": "time-expired",
 					"title": "Время подтверждения истекло"
@@ -38,6 +34,10 @@
 					"template": "phone-approve",
 					"title": "Подтверждение номера телефона"
 				},
+				{
+					"template": "disconnected",
+					"title": "Соединение с интернетом отсутствует"
+				}, 
 				{
 					"template": "404",
 					"title": "Ошибка"
