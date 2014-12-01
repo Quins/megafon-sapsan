@@ -165,7 +165,7 @@ button::-moz-focus-inner {
 	box-sizing: border-box;
 	@include PFDinDisplayPro(14px, 16px);
 	color: #fff;
-	&-caption {
+	&-title {
 
 		position: relative;
 		padding: 0 0 37px 0;
