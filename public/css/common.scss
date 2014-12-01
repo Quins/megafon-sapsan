@@ -211,7 +211,7 @@ button::-moz-focus-inner {
 			.b-disconnected-article &,
 			.b-not-money-article &,
 			.b-wrong-password-article &,
-			.b-pay-not-impossible-article & {
+			.b-pay-impossible-article & {
 			
 				@include graphics(-5px, -71px);
 			}
