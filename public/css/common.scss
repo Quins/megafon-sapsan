@@ -180,6 +180,10 @@ button::-moz-focus-inner {
 			
 			padding: 0 380px 35px 0;
 		}
+		.b-phone-aprove-article & {
+
+			padding: 0 180px 35px 0;	
+		}
 		&:before {
 
 			position: absolute;
@@ -214,10 +218,10 @@ button::-moz-focus-inner {
 
 				@include graphics(-5px, -137px);
 			}
-			.b-pay-success-article & {
+			.b-pay-success-article &,
+			.b-phone-aprove-article & {
 				@include graphics(-5px, -269px);	
 			}
-
 		}
 	}
 
@@ -238,6 +242,9 @@ button::-moz-focus-inner {
 
 		.b-pay-success-article & {
 			padding: 0 0 43px 0;
+		}
+		.b-phone-aprove-article & {
+			padding: 0 70px 26px 0;	
 		}
 	}
 	&-aside-content {
@@ -350,6 +357,7 @@ button::-moz-focus-inner {
 
 	.b-autorization-article &,
 	.b-wrong-password-article &,
+	.b-phone-aprove-article &
 	{
 
 		margin: 0 32px 0 0;
@@ -359,11 +367,10 @@ button::-moz-focus-inner {
 		margin: 0;
 		width: 162px;
 	}
-
-	.b-wrong-password-article & {
+	.b-wrong-password-article &,
+	.b-phone-aprove-article & {
 		box-shadow: none;
 	}
-
 	&-inside {
 
 		display: inline-block;
@@ -372,7 +379,6 @@ button::-moz-focus-inner {
 		vertical-align: middle;
 	}
 }
-
 .b-form-pass-section {
 	display: inline-block;
 	margin: 0;
