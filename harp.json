@@ -15,9 +15,21 @@
 					"title": "Недостаточно средств для оплаты"
 				}, 
 				{
-					"template": "buy-internet",
-					"title": "Купить интернет от Мегафона"
-				}, 
+					"template": "buy-internet-5h",
+					"title": "Купить интернет от Мегафона на 5 часов"
+				},
+				{
+					"template": "buy-internet-90min",
+					"title": "Купить интернет от Мегафона на 90 минут"
+				},
+								{
+					"template": "pay-success-5h",
+					"title": "Платеж успешно завершен (5 часов)"
+				},
+				{
+					"template": "pay-success-90min",
+					"title": "Платеж успешно завершен (90 минут)"
+				},
 				{
 					"template": "autorization",
 					"title": "Ввести логин и пароль"
@@ -25,10 +37,6 @@
 				{
 					"template": "wrong-password",
 					"title": "Некорректный пароль"
-				},
-				{
-					"template": "pay-success",
-					"title": "Платеж успешно завершен"
 				},
 				{
 					"template": "phone-approve",
