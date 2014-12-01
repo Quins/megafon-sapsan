@@ -196,7 +196,7 @@ button::-moz-focus-inner {
 				@include graphics(-5px, -5px);
 			}
 			.b-disconnected-article &,
-			.b-not-money-article &,
+			.b-no-money-article &,
 			.b-wrong-password-article &,
 			.b-pay-impossible-article & {
 			
@@ -399,15 +399,18 @@ button::-moz-focus-inner {
 		width: 218px;
 	}
 	.b-pay-success-article & {
+
 		margin: 0;
 		width: 162px;
 	}
 	.b-wrong-password-article &,
 	.b-phone-aprove-article & {
+
 		box-shadow: none;
 	}
 }
 .b-form-pass-section {
+
 	display: inline-block;
 	margin: 0;
 	width: 195px;
