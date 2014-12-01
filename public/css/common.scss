@@ -287,12 +287,12 @@ a, a:hover {
 				@include graphics(-5px, -71px);
 			}
 
-			.b-autorization-article & {
+			.b-authorization-article & {
 
 				@include graphics(-5px, -137px);
 			}
 
-			.b-payment-success-article &,
+			.b-payment-successful-article &,
 			.b-phone-approved-article & {
 				@include graphics(-5px, -269px);	
 			}

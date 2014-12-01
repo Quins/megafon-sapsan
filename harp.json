@@ -7,6 +7,10 @@
 
 			"primary": [
 				{
+					"template": "main",
+					"title": "Wi-Fi от Мегафон в Сапсане"
+				},
+				{
 					"template": "time-expired",
 					"title": "Время подтверждения истекло"
 				},
@@ -23,19 +27,19 @@
 					"title": "Купить интернет от Мегафона на 90 минут"
 				},
 				{
-					"template": "pay-card-5h",
+					"template": "payment-card-5h",
 					"title": "Оплата банковской картой интернета на 5 часов"
 				},
 				{
-					"template": "pay-success-5h",
+					"template": "payment-successful-5h",
 					"title": "Платеж успешно завершен (5 часов)"
 				},
 				{
-					"template": "pay-success-90min",
+					"template": "payment-successful-90min",
 					"title": "Платеж успешно завершен (90 минут)"
 				},
 				{
-					"template": "autorization",
+					"template": "authorization",
 					"title": "Ввести логин и пароль"
 				},
 				{
@@ -43,7 +47,7 @@
 					"title": "Некорректный пароль"
 				},
 				{
-					"template": "phone-approve",
+					"template": "phone-approved",
 					"title": "Подтверждение номера телефона"
 				},
 				{
@@ -51,7 +55,7 @@
 					"title": "Соединение с интернетом отсутствует"
 				},
 				{
-					"template": "pay-not-impossible",
+					"template": "payment-impossible",
 					"title": "Потдверждение платежа невозможно"
 				},
 				{
