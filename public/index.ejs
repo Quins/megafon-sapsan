@@ -1,16 +1,18 @@
 
 <article class="b-article">
 	<h1 class="b-article-title">Список страниц</h1>
-	<ul class="b-article-pages-collection">
-	<% for (var i = 0; i < navigation.primary.length; i++) { %>
-		<li class="b-article-pages-collection-clause">
-			<% if (environment == "production") { %>
-			<a href="./<%= (navigation.primary[i].link !== undefined ? navigation.primary[i].link : navigation.primary[i].template) %>.html" class="b-primary-menu-clause-link"><%= navigation.primary[i].title %></a>
-			<% } else { %>
-			<a href="/<%= (navigation.primary[i].link !== undefined ? navigation.primary[i].link : navigation.primary[i].template) %>" class="b-primary-menu-clause-link"><%= navigation.primary[i].title %></a>
-			<% } %>
-		</li>
-	<% } %>
-	</ul>
+	<div class="b-article-contents">
+		<ul class="b-article-pages-collection">
+		<% for (var i = 0; i < navigation.primary.length; i++) { %>
+			<li class="b-article-pages-collection-clause">
+				<% if (environment == "production") { %>
+				<a href="./<%= (navigation.primary[i].link !== undefined ? navigation.primary[i].link : navigation.primary[i].template) %>.html" class="b-primary-menu-clause-link"><%= navigation.primary[i].title %></a>
+				<% } else { %>
+				<a href="/<%= (navigation.primary[i].link !== undefined ? navigation.primary[i].link : navigation.primary[i].template) %>" class="b-primary-menu-clause-link"><%= navigation.primary[i].title %></a>
+				<% } %>
+			</li>
+		<% } %>
+		</ul>
+	</div>
 </article>
 

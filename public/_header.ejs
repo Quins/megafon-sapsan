@@ -1,7 +1,15 @@
-<header class="l-header g-cleared">
+<header class="l-header">
 	
-	<h1 class="b-megafon-logo"><img src="./i/logo-megafon.png" alt="Мегафон — оператор быстрой связи" class="b-megafon-logo-picture"></h1>
-	<h2 class="b-rzd-logo"><img src="./i/logo-rzd.png" alt="Российские железные дороги" class="b-rzd-logo-picture"></h2>
-	<p class="b-contacts"><a href="tel:88005509434" class="b-contacts-link">8&nbsp;800&nbsp;550&nbsp;94&nbsp;34</a></p>
-	<a href="#" class="b-controls-link">Назад</a>
+	<h1 class="b-logo b-megafon-logo"><a href="<%= (environment == "production" ? "./index.html" : "/") %>" class="b-logo-link">&laquo;Мегафон&raquo; &mdash; официальный интернет-провайдер поездов &laquo;Сапсан&raquo;</a></h1>
+	<span class="b-logo b-rzd-logo"><a href="#" class="b-logo-link">&laquo;Российские железные дороги&raquo;</a></span>
+	<ul class="b-primary-menu g-cleared">
+		<li class="b-primary-menu-clause b-primary-menu-phone-clause">
+			<a href="tel:8 800 550 94 34" class="b-primary-menu-clause-link">8&nbsp;800&nbsp;550&nbsp;94&nbsp;34</a>
+		</li>
+		<% if (["index", "wrong-password", "no-money"].indexOf(current.source) < 0) { %>
+		<li class="b-primary-menu-clause b-primary-menu-backward-clause">
+			<a href="#" onclick="history.go(-2);" class="b-primary-menu-clause-link">Назад</a>
+		</li>
+		<% } %>
+	</ul>
 </header>

@@ -36,6 +36,11 @@ button::-moz-focus-inner {
 	border: none;
 }
 
+a, a:hover {
+
+	@include transition(.3s);
+}
+
 /* Global (global styles) / prefix - g- */
 
 .g-pseudo-link {
@@ -75,6 +80,8 @@ button::-moz-focus-inner {
 	display: none !important;
 }
 
+/* Layout */
+
 .l-header {
 
 	position: relative;
@@ -82,6 +89,7 @@ button::-moz-focus-inner {
 	padding: 18px 40px 90px 20px;
 	width: 1024px;
 	min-height: 46px;
+	@include Font(0,0);
 }
 
 .l-content {
@@ -94,6 +102,8 @@ button::-moz-focus-inner {
 	position: relative;
 }
 
+/* Blocks */
+
 .b-background-section {
 
 	position: absolute;
@@ -105,55 +115,124 @@ button::-moz-focus-inner {
 	background-repeat: no-repeat;
 }
 
-.b-megafon-logo,
-.b-rzd-logo{
+.b-logo {
 
-	float: left;
 	display: inline-block;
-	padding: 0 80px 0 0;
-	line-height: 40px;
-	img {
-
-		max-width: 100%;
-		vertical-align: middle;
-	}
-}
-.b-contacts-link {
-	
-	float: left;
-	@include PFDinDisplayPro(14px, 40px);
-	color: #fff;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
-.b-pages-title {
-	
-	display: block;
-	@include Font(0px, 0px);
+	vertical-align: top;
 	text-indent: -9999px;
-}
-.b-controls-link {
-
+	height: 40px;
 	position: relative;
-	float: right;
-	@include PFDinDisplayPro(22px, 40px);
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #fff;
+	margin: 0 80px 0 0;
+
 	&:before {
 
-		position: absolute;
 		content: "";
-		top: 0;
-		left: -66px;
-		width: 46px;
-		height: 46px;
-		@include graphics(-5px, -335px);
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
 	}
-	&:hover {
-		text-decoration: underline;
+
+	&-link {
+
+		display: block;
+		height: 100%;
+		position: relative;
+	}
+
+	&.b-megafon-logo {
+
+		width: 137px;
+
+		&:before {
+
+			width: 137px;
+			height: 25px;
+			margin: -12px 0 0;
+			background: url(../i/logo-megafon.png);
+		}
+	}
+
+	&.b-rzd-logo {
+
+		width: 146px;
+
+		&:before {
+
+			width: 146px;
+			height: 23px;
+			margin: -11px 0 0;
+			background: url(../i/logo-rzd.png);
+		}
+	}
+}
+
+.b-primary-menu {
+
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 0 0 443px;
+	margin: 0 0 0 -443px;
+
+	&-clause {
+
+		display: inline-block;
+
+		&-link {
+
+			.b-primary-menu-phone-clause & {
+
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+
+				&:hover {
+
+					border-bottom-color: #fff;
+				}
+			}
+
+			.b-primary-menu-backward-clause & {
+
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+
+				&:before {
+
+					display: block;
+					position: absolute;
+					content: "";
+					width: 46px;
+					height: 46px;
+					top: 50%;
+					left: -66px;
+					margin: -23px 0 0;
+					@include graphics(-5px, -335px);
+				}
+
+				&:hover {
+
+					border-bottom-color: #fff;
+				}
+			}
+		}
+	}
+
+	&-phone-clause {
+
+		@include PFDinDisplayPro(14px, 40px);
+		color: #fff;
+	}
+
+	&-backward-clause {
+
+		float: right;
+		@include PFDinDisplayPro(22px, 40px);
+		text-transform: uppercase;
+		color: #fff;
+		position: relative;
 	}
 }
 
@@ -171,19 +250,7 @@ button::-moz-focus-inner {
 		position: relative;
 		padding: 0 0 37px 0;
 		@include Font(60px, 60px);
-		.b-buy-internet-article & {
-			
-			padding: 0;
-		}
-		.b-autorization-article &,
-		.b-wrong-password-article & {
-			
-			padding: 0 380px 35px 0;
-		}
-		.b-phone-aprove-article & {
 
-			padding: 0 180px 35px 0;	
-		}
 		&:before {
 
 			position: absolute;
@@ -196,6 +263,7 @@ button::-moz-focus-inner {
 			border-radius: 50%;
 			overflow: hidden;
 		}
+
 		&:after {
 
 			position: absolute;
@@ -204,25 +272,46 @@ button::-moz-focus-inner {
 			left: -177px;
 			width: 76px;
 			height: 66px;
+
 			.b-time-expired-article & {
 
 				@include graphics(-5px, -5px);
 			}
+
+			.b-error-article &, 
 			.b-disconnected-article &,
-			.b-not-money-article &,
+			.b-no-money-article &,
 			.b-wrong-password-article &,
-			.b-pay-not-impossible-article & {
+			.b-payment-impossible-article & {
 			
 				@include graphics(-5px, -71px);
 			}
+
 			.b-autorization-article & {
 
 				@include graphics(-5px, -137px);
 			}
-			.b-pay-success-article &,
-			.b-phone-aprove-article & {
+
+			.b-payment-success-article &,
+			.b-phone-approved-article & {
 				@include graphics(-5px, -269px);	
 			}
+		}
+
+		.b-buy-internet-article & {
+			
+			padding: 0;
+		}
+
+		.b-authorization-article &,
+		.b-wrong-password-article & {
+			
+			padding: 0 380px 35px 0;
+		}
+
+		.b-phone-approved-article & {
+
+			padding: 0 180px 35px 0;
 		}
 	}
 
@@ -235,6 +324,28 @@ button::-moz-focus-inner {
 
 			padding: 0 0 30px;
 		}
+
+		ul a, p a, 
+		&-link {
+
+			@include Font(22px, normal);
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #00B269;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+
+				color: #fff;
+				border-bottom-color: #fff;
+			}
+		}
+
+		ul, &-collection {
+
+			list-style: disc outside;
+			padding: 0 0 0 30px;
+		}
 	}
 
 	&-description {
@@ -242,55 +353,35 @@ button::-moz-focus-inner {
 		padding: 0 0 56px 0;
 		@include Font(29px, 35px);
 
-		.b-pay-success-article & {
+		.b-payment-success-article & {
 			padding: 0 0 43px 0;
 		}
-		.b-phone-aprove-article & {
+
+		.b-phone-approved-article & {
 			padding: 0 70px 26px 0;	
 		}
 	}
-	&-aside-content {
+
+	&-costs-section {
 
 		position: absolute;
 		top: 23px;
 		left: 109px;
-		@include PFDinDisplayPro-Light(41px, 50px);
-	}
-	&-aside-small-content {
 
-		@include Font(25px, 30px);
-	}
-	&-link {
-
-		@include Font(22px, normal);
-		text-decoration: none;
-		text-transform: uppercase;
-		color: #00B269;
-		&:hover {
-
-			text-decoration: underline;
-		}
-		.b-autorization-article & {
+		&-title {
 
 			display: inline-block;
-			position: relative;
-			height: 60px;
-			line-height: 60px;
-			text-align: center;
-			text-decoration: none;
-			color: #00B269;
-			text-transform: uppercase;
+			@include PFDinDisplayPro-Light(41px, 50px);
+		}
 
-			&-link {
+		&-description {
 
-				display: inline-block;
-				@include PFDinDisplayPro(21px, 25px);
-				text-align: left;
-				vertical-align: middle;
-			}
+			display: inline-block;
+			@include PFDinDisplayPro-Light(25px, 30px);
 		}
 	}
 }
+
 .b-form {
 
 	&-fieldset {
@@ -299,7 +390,7 @@ button::-moz-focus-inner {
 
 			@include PFDinDisplayPro(24px, 29px);
 
-			.b-autorization-article & {
+			.b-authorization-article & {
 
 				display: block;
 				padding: 0 330px 0 0;
@@ -314,7 +405,7 @@ button::-moz-focus-inner {
 		background-color: #fff;
 		overflow: hidden;
 		border-radius: 30px;
-		.b-autorization-article & {
+		.b-authorization-article & {
 
 			display: inline-block;
 			margin: 35px 26px 40px 0;
@@ -357,22 +448,6 @@ button::-moz-focus-inner {
 	overflow: hidden;
 	box-shadow: 0px 2px 0 0px rgba(0, 0, 0, 0.3);
 
-	.b-autorization-article &,
-	.b-wrong-password-article &,
-	.b-phone-aprove-article &
-	{
-
-		margin: 0 32px 0 0;
-		width: 218px;
-	}
-	.b-pay-success-article & {
-		margin: 0;
-		width: 162px;
-	}
-	.b-wrong-password-article &,
-	.b-phone-aprove-article & {
-		box-shadow: none;
-	}
 	&-inside {
 
 		display: inline-block;
@@ -380,8 +455,28 @@ button::-moz-focus-inner {
 		text-align: left;
 		vertical-align: middle;
 	}
+
+	.b-authorization-article &,
+	.b-wrong-password-article &,
+	.b-phone-approved-article & {
+
+		margin: 0 32px 0 0;
+		width: 218px;
+	}
+
+	.b-payment-success-article & {
+		margin: 0;
+		width: 162px;
+	}
+
+	.b-wrong-password-article &,
+	.b-phone-approved-article & {
+		box-shadow: none;
+	}
 }
+
 .b-form-pass-section {
+
 	display: inline-block;
 	margin: 0;
 	width: 195px;
@@ -389,6 +484,7 @@ button::-moz-focus-inner {
 	line-height: 60px;
 	text-align: center;
 	overflow: hidden;
+
 	.b-form-pass-section-link {
 
 		display: inline-block;
@@ -398,9 +494,9 @@ button::-moz-focus-inner {
 		text-transform: uppercase;
 		vertical-align: middle;
 		color: #00B269;
-		
-		
+				
 		&:hover {
+
 			text-decoration: underline;
 		}
 	}
