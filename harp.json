@@ -37,7 +37,11 @@
 				{
 					"template": "disconnected",
 					"title": "Соединение с интернетом отсутствует"
-				}, 
+				},
+				{
+					"template": "pay-not-impossible",
+					"title": "Потдверждение платежа невозможно"
+				},
 				{
 					"template": "404",
 					"title": "Ошибка"
