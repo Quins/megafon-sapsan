@@ -296,6 +296,23 @@ a, a:hover {
 			.b-phone-approved-article & {
 				@include graphics(-5px, -269px);	
 			}
+			.b-scretch-card-article & {
+				@include graphics(-5px, -201px);
+			}
+		}
+		.b-buy-internet-article & {
+			
+			padding: 0;
+		}
+		.b-autorization-article &,
+		.b-wrong-password-article &,
+		.b-scretch-card-article & {
+			
+			padding: 0 380px 35px 0;
+		}
+		.b-phone-aprove-article & {
+
+			padding: 0 180px 35px 0;	
 		}
 
 		.b-buy-internet-article & {
@@ -385,7 +402,8 @@ a, a:hover {
 .b-form {
 
 	&-fieldset {
-
+		
+		position: relative;
 		&-title {
 
 			@include PFDinDisplayPro(24px, 29px);
@@ -414,6 +432,46 @@ a, a:hover {
 
 			@include PFDinDisplayPro-Light(20px, 24px);
 			border: 0;
+		}
+		.b-form-error-fieldset & {
+			
+			height: 22px;
+			border: 2px solid #EA2121;
+		}
+	}
+	&-field-error {
+
+		visibility: hidden;
+		position: absolute;
+		top: 59px;
+		right: 132px;
+		width: 215px;
+		@include PFDinDisplayPro-Light(20px, normal);
+		&:after {
+
+			position: absolute;
+			content: "";
+			top: 5px;
+			left: -60px;
+			width: 40px;
+			height: 40px;
+			background-color: #EA2121;
+			border-radius: 50%;
+			z-index: 12;
+		}
+		&:before {
+
+			position: absolute;
+			content: "!";
+			top: 14px;
+			left: -43px;
+			color: #fff;
+			@include PFDinDisplayPro-Medium(20px, normal);
+			z-index: 13;
+		}
+		.b-form-error-fieldset & {
+
+			visibility: visible;
 		}
 	}
 	&-law-description {
@@ -458,19 +516,23 @@ a, a:hover {
 
 	.b-authorization-article &,
 	.b-wrong-password-article &,
-	.b-phone-approved-article & {
+	.b-phone-approved-article &, 
+	.b-scretch-card-article &
+	{
 
 		margin: 0 32px 0 0;
 		width: 218px;
 	}
 
 	.b-payment-success-article & {
+
 		margin: 0;
 		width: 162px;
 	}
 
 	.b-wrong-password-article &,
 	.b-phone-approved-article & {
+
 		box-shadow: none;
 	}
 }
@@ -494,7 +556,7 @@ a, a:hover {
 		text-transform: uppercase;
 		vertical-align: middle;
 		color: #00B269;
-				
+
 		&:hover {
 
 			text-decoration: underline;
@@ -502,3 +564,4 @@ a, a:hover {
 	}
 }
 
+	
