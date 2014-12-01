@@ -6,6 +6,10 @@
 		"navigation": {
 
 			"primary": [
+			{
+					"template": "index",
+					"title": "Навигатор по страницам"
+				},
 				{
 					"template": "time-expired",
 					"title": "Время подтверждения истекло"
@@ -13,6 +17,18 @@
 				{
 					"template": "not-money",
 					"title": "Недостаточно средств для оплаты"
+				}, 
+				{
+					"template": "buy-internet",
+					"title": "Купить интернет от Мегафона"
+				}, 
+				{
+					"template": "autorization",
+					"title": "Ввести логин и пароль"
+				},
+				{
+					"template": "wrong-password",
+					"title": "Некорректный пароль"
 				}, 
 				{
 					"template": "404",
