@@ -229,6 +229,7 @@ button::-moz-focus-inner {
 	&-contents {
 
 		@include Font(29px, 35px);
+		padding: 0 0 10px;
 
 		p, &-paragraph {
 
@@ -268,25 +269,6 @@ button::-moz-focus-inner {
 		&:hover {
 
 			text-decoration: underline;
-		}
-		.b-autorization-article & {
-
-			display: inline-block;
-			position: relative;
-			height: 60px;
-			line-height: 60px;
-			text-align: center;
-			text-decoration: none;
-			color: #00B269;
-			text-transform: uppercase;
-
-			&-link {
-
-				display: inline-block;
-				@include PFDinDisplayPro(21px, 25px);
-				text-align: left;
-				vertical-align: middle;
-			}
 		}
 	}
 }
