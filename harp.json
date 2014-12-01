@@ -29,7 +29,11 @@
 				{
 					"template": "wrong-password",
 					"title": "Некорректный пароль"
-				}, 
+				},
+				{
+					"template": "pay-success",
+					"title": "Платеж успешно завершен"
+				},
 				{
 					"template": "404",
 					"title": "Ошибка"

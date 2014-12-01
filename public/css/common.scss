@@ -169,7 +169,7 @@ button::-moz-focus-inner {
 
 		position: relative;
 		padding: 0 0 37px 0;
-		@include Font(60px, 72px);
+		@include Font(60px, 60px);
 		.b-buy-internet-article & {
 			
 			padding: 0;
@@ -178,7 +178,6 @@ button::-moz-focus-inner {
 		.b-wrong-password-article & {
 			
 			padding: 0 380px 35px 0;
-			line-height: 60px;
 		}
 		&:before {
 
@@ -213,13 +212,20 @@ button::-moz-focus-inner {
 
 				@include graphics(-5px, -137px);
 			}
+			.b-pay-success-article & {
+				@include graphics(-5px, -269px);	
+			}
 
 		}
 	}
-	&-sub-caption {
+	&-description {
 		
 		padding: 0 0 56px 0;
 		@include Font(29px, 35px);
+
+		.b-pay-success-article & {
+			padding: 0 0 43px 0;
+		}
 	}
 	&-aside-content {
 
@@ -330,10 +336,15 @@ button::-moz-focus-inner {
 	box-shadow: 0px 2px 0 0px rgba(0, 0, 0, 0.3);
 
 	.b-autorization-article &,
-	.b-wrong-password-article & {
+	.b-wrong-password-article &,
+	{
 
 		margin: 0 32px 0 0;
 		width: 218px;
+	}
+	.b-pay-success-article & {
+		margin: 0;
+		width: 162px;
 	}
 
 	.b-wrong-password-article & {
