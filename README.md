@@ -5,6 +5,6 @@
 
     harp server megafon-sapsan
 
-Сборка готового проекта
+Сборка готового проекта:
 
     harp compile megafon-sapsan-v.1.0
