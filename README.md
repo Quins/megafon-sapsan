@@ -1,6 +1,10 @@
-Blanq – пустой проект для harp
+Веб-интерфейс подключения к интернету «Мегафон» в поездах «Сапсан»
 =====
 
-Инициализация: 
+Запуск сервера (из родительской директории): 
 
-    harp init projectname --boilerplate Quins/blanq
+    harp server megafon-sapsan
+
+Сборка готового проекта
+
+    harp compile megafon-sapsan-v.1.0
