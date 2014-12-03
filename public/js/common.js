@@ -1,7 +1,36 @@
 $(document).ready(function() {
 
-	
+	$("[data-select]").selects();
+
 });
+
+/* Selects */
+
+(function( $ ) {
+	$.fn.selects = function(options) {
+
+		if (!options)
+			var options = {};
+
+		return this.each( function() {
+
+			var select = {
+				descriptor: ($(this).data("select-descriptor") ? $(this).data("select-descriptor") : ""), 
+				entity: $(this).find("[data-select-entity]"), 
+				label: $(this).find("[data-select-label]")
+			};
+
+			select.properties = $.extend({}, 
+				(select.descriptor in options ? options[select.descriptor] : {})
+			);
+
+			select.entity.change( function(event) {
+
+				select.label.text( select.entity.find("option:selected").text() );
+			});
+		});
+	};
+})(jQuery);
 
 
 /* Unsorted */
