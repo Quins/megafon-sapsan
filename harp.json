@@ -11,13 +11,13 @@
 				"template": "main",
 				"navigation": "primary"
 			}, 
-			"no-time": {
+			"notime": {
 
 				"template": "time-expired",
 				"title": "Время подтверждения истекло", 
 				"navigation": "errors"
 			}, 
-			"no-money": {
+			"nomoney": {
 
 				"template": "no-money",
 				"title": "Недостаточно средств для оплаты", 
@@ -40,6 +40,12 @@
 				"template": "payment-card-5h",
 				"title": "Оплата банковской картой интернета на 5 часов", 
 				"navigation": "payment"
+			},
+			"card90m": {
+
+				"template": "payment-card-90m",
+				"title": "Оплата банковской картой интернета на 90 минут", 
+				"navigation": "payment"
 			}, 
 			"success5h": {
 
@@ -52,6 +58,12 @@
 				"template": "payment-successful-90min",
 				"title": "Платеж успешно завершен (90 минут)", 
 				"navigation": "success"
+			},
+			"scretchsuccess": {
+
+				"template": "scretch-card-activated",
+				"title": "Скретч-карта успешно активирована", 
+				"navigation": "success"
 			}, 
 			"auth": {
 
@@ -59,25 +71,25 @@
 				"title": "Ввести логин и пароль", 
 				"navigation": "authorization"
 			}, 
-			"auth-failed": {
+			"authfailed": {
 
 				"template": "wrong-password",
 				"title": "Некорректный пароль", 
 				"navigation": "errors"
 			}, 
-			"auth-phone": {
+			"authphone": {
 
 				"template": "phone-approved",
 				"title": "Подтверждение номера телефона", 
 				"navigation": "authorization"
 			}, 
-			"no-connection": {
+			"noconnection": {
 
 				"template": "disconnected",
 				"title": "Соединение с интернетом отсутствует", 
 				"navigation": "errors"
 			}, 
-			"no-approval": {
+			"noapproval": {
 
 				"template": "payment-impossible",
 				"title": "Потдверждение платежа невозможно", 

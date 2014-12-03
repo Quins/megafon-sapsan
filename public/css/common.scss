@@ -305,7 +305,8 @@ a, a:hover {
 			}
 
 			.b-payment-successful-article &,
-			.b-phone-approved-article & {
+			.b-phone-approved-article &,
+			.b-scretch-activated-article & {
 				@include graphics(-5px, -269px);	
 			}
 			.b-scretch-card-article & {
@@ -510,6 +511,13 @@ a, a:hover {
 	}
 }
 
+.b-payment-card-article {
+
+	margin: 0 auto;
+	padding: 0;
+	width: 808px;
+}
+
 .b-form {
 	
 	&-fieldset {
@@ -530,25 +538,6 @@ a, a:hover {
 				@include Font(20px, normal);
 			}
 		}
-		&-inside {
-
-			display: inline-block;
-			margin: 8px 46px 0 0;
-			width: 126px;
-		}
-		&-separator {
-
-			position: relative;
-			&:after {
-
-				position: absolute;
-				content: "/";
-				top: 10px;
-				right: -29px;
-				@include PFDinDisplayPro(22px, normal);
-				color: #fff;	
-			}
-		}
 	}
 
 	&-submit-fieldset {
@@ -564,20 +553,36 @@ a, a:hover {
 	&-field {
 		
 		margin: 25px 0 40px;
-		padding: 17px 50px;
-		/*width: 178px;*/
-		width: 100%;
+		padding: 12px 50px;
+		width: 280px;
 		box-sizing: border-box;
 		background-color: #fff;
 		overflow: hidden;
 		border-radius: 30px;
+		.b-card-form & {
+
+			width: 100%;
+		}
 
 		&-title {
 
+			position: relative;
 			display: block;
 			color: #000;
 			text-align: center;
 			@include PFDinDisplayPro-Light(20px, 26px);
+			&:after {
+
+				position: absolute;
+				content: "";
+				top: 50%;
+				margin-top: -4px;
+				right: 0;
+				width: 15px;
+				height: 8px;
+				@include graphics(-66px, -335px);
+				@include opacity(0.5);
+			}
 		}
 
 		.b-authorization-article & {
@@ -586,31 +591,10 @@ a, a:hover {
 			margin: 35px 26px 40px 0;
 		}
 
-		.b-form-wide-fieldset & {
-
-			width: 298px;
-		}
-
 		.b-payment-card-article & {
 
 			margin: 8px 0 20px;
 			padding: 12px 50px;
-		}
-
-		.b-form-selects-fieldset &,
-		.b-form-aside-fieldset & {
-
-			margin: 0  0 -49px;
-			padding: 12px 30px;
-			width: 66px;
-			color: #000;
-			@include PFDinDisplayPro-Light(20px, 24px);
-			cursor: pointer;
-		}
-
-		.b-form-aside-fieldset & {
-			
-			margin: 8px 0 0;
 		}
 
 		&-entity {
@@ -619,16 +603,6 @@ a, a:hover {
 			width: 100%;
 			border: 0;
 
-			.b-form-wide-fieldset &,
-			.b-form-aside-fieldset & {
-
-				text-align: center;
-				@include placeholder {
-					text-transform: uppercase;
-					@include PFDinDisplayPro-Light(16px, 19px);
-				}
-			}
-
 			.b-form-validity-fieldset & {
 
 				position: absolute;
@@ -636,7 +610,8 @@ a, a:hover {
 				left: 0;
 				right: 0;
 				bottom: 0;
-				opacity: 0;
+				@include opacity(0);
+				cursor: pointer;
 			}
 
 			.b-form-cardnumber-fieldset & {
@@ -660,9 +635,24 @@ a, a:hover {
 		}
 		.b-form-error-fieldset & {
 			
-			height: 22px;
 			border: 2px solid #EA2121;
 		}
+	}
+
+	&-login-field {
+
+		width: 280px;
+
+	}
+
+	&-password-field {
+
+		width: 280px;
+	}
+
+	&-phone-number-field {
+
+		width: 280px;
 	}
 
 	&-select-field {
@@ -682,7 +672,6 @@ a, a:hover {
 	&-month-field {
 
 		display: inline-block;
-		width: 160px;
 		position: relative;
 		overflow: visible;
 
@@ -703,13 +692,19 @@ a, a:hover {
 
 			margin: 8px 90px 20px 0;
 		}
+		.b-card-form & {
+			width: 160px;
+		}
 	}
 
 	&-year-field {
 
 		display: inline-block;
-		width: 160px;
 		position: relative;
+
+		.b-card-form & {
+			width: 160px;
+		}
 	}
 
 	&-field-error {
@@ -755,23 +750,10 @@ a, a:hover {
 
 			color: #33CF7D;
 			text-decoration: none;
-			&:hover {
+			.b-buy-internet-article & {
 
-				text-decoration: underline;
+				text-transform: none;
 			}
-		}
-	}
-	&-selects-fieldset {
-
-		margin: 0 0 16px;
-		display: inline-block;
-		vertical-align: top;
-	}
-	&-fieldset-separator {
-
-		position: relative;
-		&:after {
-
 		}
 	}
 
@@ -880,12 +862,6 @@ a, a:hover {
 			text-decoration: underline;
 		}
 	}
-}
-.b-payment-card-article {
-
-	margin: 0 auto;
-	padding: 0;
-	width: 808px;
 }
 
 	

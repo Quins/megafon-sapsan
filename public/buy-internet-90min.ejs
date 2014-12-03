@@ -16,10 +16,10 @@
 			<fieldset class="b-form-fieldset">
 				<label class="b-form-fieldset-title">Выберите способ оплаты</label>
 				<p class="b-form-law-description">Нажимая на кнопку, Вы соглашаетесь <a href="#" class="b-form-law-description-link">с условиями предоставления услуги</a></p>
-				<a class="b-button" href="#">
+				<a <%- partial("_href", {page : pages.card90m}) %> class="b-button" title="Оплата банковской картой">
 					<span class="b-button-inside">Оплата банковской картой</span>
 				</a>
-				<a class="b-button" href="#">
+				<a <%- partial("_href", {page : pages.nomoney}) %> class="b-button" title="Оплата с мобильного телефона">
 					<span class="b-button-inside">Оплата c мобильного телефона</span>
 				</a>
 			</fieldset>
