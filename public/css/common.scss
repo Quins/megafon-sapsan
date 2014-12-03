@@ -106,9 +106,11 @@ a, a:hover {
 
 .b-background-section {
 
-	position: absolute;
-	width: 100%;
-	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	background-size: cover;
 	background-position: 50% 50%;
 	background-attachment: fixed;
@@ -233,6 +235,19 @@ a, a:hover {
 		text-transform: uppercase;
 		color: #fff;
 		position: relative;
+	}
+
+	.l-content & {
+
+		display: list;
+		list-style: disc outside;
+		padding: 0 0 30px 30px;
+		margin: 0;
+
+		&-clause {
+
+			display: list-item;
+		}
 	}
 }
 
@@ -361,7 +376,7 @@ a, a:hover {
 		ul, &-collection {
 
 			list-style: disc outside;
-			padding: 0 0 0 30px;
+			padding: 0 0 30px 30px;
 		}
 	}
 

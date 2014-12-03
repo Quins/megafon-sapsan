@@ -3,70 +3,99 @@
 		"project": {
 			"title": "WiFi от Мегафон в Сапсане"
 		},
-		"navigation": {
+		"pages": {
 
-			"primary": [
-				{
-					"template": "main",
-					"title": "Wi-Fi от Мегафон в Сапсане"
-				},
-				{
-					"template": "time-expired",
-					"title": "Время подтверждения истекло"
-				},
-				{
-					"template": "no-money",
-					"title": "Недостаточно средств для оплаты"
-				}, 
-				{
-					"template": "buy-internet-5h",
-					"title": "Купить интернет от Мегафона на 5 часов"
-				},
-				{
-					"template": "buy-internet-90min",
-					"title": "Купить интернет от Мегафона на 90 минут"
-				},
-				{
-					"template": "payment-card-5h",
-					"title": "Оплата банковской картой интернета на 5 часов"
-				},
-				{
-					"template": "payment-successful-5h",
-					"title": "Платеж успешно завершен (5 часов)"
-				},
-				{
-					"template": "payment-successful-90min",
-					"title": "Платеж успешно завершен (90 минут)"
-				},
-				{
-					"template": "authorization",
-					"title": "Ввести логин и пароль"
-				},
-				{
-					"template": "wrong-password",
-					"title": "Некорректный пароль"
-				},
-				{
-					"template": "phone-approved",
-					"title": "Подтверждение номера телефона"
-				},
-				{
-					"template": "disconnected",
-					"title": "Соединение с интернетом отсутствует"
-				},
-				{
-					"template": "payment-impossible",
-					"title": "Потдверждение платежа невозможно"
-				},
-				{
-					"template": "scretch-card",
-					"title": "Активация скретч-карты"
-				},
-				{
-					"template": "404",
-					"title": "Ошибка"
-				}
-			]
+			"main": {
+
+				"title": "Wi-Fi от Мегафон в Сапсане",
+				"template": "main",
+				"navigation": "primary"
+			}, 
+			"no-time": {
+
+				"template": "time-expired",
+				"title": "Время подтверждения истекло", 
+				"navigation": "errors"
+			}, 
+			"no-money": {
+
+				"template": "no-money",
+				"title": "Недостаточно средств для оплаты", 
+				"navigation": "errors"
+			}, 
+			"buy5h": {
+
+				"template": "buy-internet-5h",
+				"title": "Купить интернет от Мегафона на 5 часов", 
+				"navigation": "payment"
+			}, 
+			"buy90min": {
+
+				"template": "buy-internet-90min",
+				"title": "Купить интернет от Мегафона на 90 минут", 
+				"navigation": "payment"
+			}, 
+			"card5h": {
+
+				"template": "payment-card-5h",
+				"title": "Оплата банковской картой интернета на 5 часов", 
+				"navigation": "payment"
+			}, 
+			"success5h": {
+
+				"template": "payment-successful-5h",
+				"title": "Платеж успешно завершен (5 часов)", 
+				"navigation": "success"
+			}, 
+			"success90min": {
+
+				"template": "payment-successful-90min",
+				"title": "Платеж успешно завершен (90 минут)", 
+				"navigation": "success"
+			}, 
+			"auth": {
+
+				"template": "authorization",
+				"title": "Ввести логин и пароль", 
+				"navigation": "authorization"
+			}, 
+			"auth-failed": {
+
+				"template": "wrong-password",
+				"title": "Некорректный пароль", 
+				"navigation": "errors"
+			}, 
+			"auth-phone": {
+
+				"template": "phone-approved",
+				"title": "Подтверждение номера телефона", 
+				"navigation": "authorization"
+			}, 
+			"no-connection": {
+
+				"template": "disconnected",
+				"title": "Соединение с интернетом отсутствует", 
+				"navigation": "errors"
+			}, 
+			"no-approval": {
+
+				"template": "payment-impossible",
+				"title": "Потдверждение платежа невозможно", 
+				"navigation": "errors"
+			}, 
+			"scretch": {
+
+				"template": "scretch-card",
+				"title": "Активация скретч-карты", 
+				"navigation": "payment"
+			}, 
+			"404": {
+
+				"template": "404",
+				"title": "Страница не найдена", 
+				"navigation": "errors"
+			}
+
 		}
 	},
 	"domains": []

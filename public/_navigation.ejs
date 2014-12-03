@@ -1,0 +1,9 @@
+<ul class="b-<%= category %>-menu">
+	<% for (var pagename in pages) { %>
+		<% if (pages.hasOwnProperty(pagename) && pages[pagename].navigation == category) { %>
+	<li class="b-<%= category %>-menu-clause b-<%= category %>-menu-<%= pagename %>-clause">
+		<a <%- partial("_href", {page : pages[pagename]}) %> class="b-<%= category %>-menu-clause-link"><%= pages[pagename].title %></a>
+	</li>
+		<% } %>
+	<% } %>
+</ul>
