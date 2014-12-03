@@ -269,6 +269,10 @@ a, a:hover {
 			background-color: #482670;
 			border-radius: 50%;
 			overflow: hidden;
+			.b-payment-card-article & {
+
+				display: none;
+			}
 		}
 
 		&:after {
@@ -306,6 +310,10 @@ a, a:hover {
 			.b-scretch-card-article & {
 				@include graphics(-5px, -201px);
 			}
+			.b-payment-card-article & {
+
+				display: none;
+			}
 		}
 		.b-buy-internet-article & {
 			
@@ -337,7 +345,10 @@ a, a:hover {
 
 			padding: 0 180px 35px 0;
 		}
+		.b-payment-card-article & {
 
+			padding: 0 0 8px;
+		}
 	}
 
 	&-contents {
@@ -499,7 +510,13 @@ a, a:hover {
 }
 
 .b-form {
+	
+	&-background-inside {
 
+		margin: 0 0 0 -16px;
+		padding: 45px 0 40px 70px; 
+		background: transparent url('../i/banking-card.png') no-repeat 0 0;
+	}
 	&-fieldset {
 		
 		position: relative;
@@ -511,6 +528,30 @@ a, a:hover {
 
 				display: block;
 				padding: 0 330px 0 0;
+			}
+			.b-payment-card-article & {
+
+				display: block;
+				@include Font(20px, normal);
+			}
+		}
+		&-inside {
+
+			display: inline-block;
+			margin: 8px 46px 0 0;
+			width: 126px;
+		}
+		&-separator {
+
+			position: relative;
+			&:after {
+
+				position: absolute;
+				content: "/";
+				top: 10px;
+				right: -29px;
+				@include PFDinDisplayPro(22px, normal);
+				color: #fff;	
 			}
 		}
 	}
@@ -527,10 +568,50 @@ a, a:hover {
 			display: inline-block;
 			margin: 35px 26px 40px 0;
 		}
+		.b-form-wide-fieldset & {
+
+			width: 298px;
+		}
+		.b-payment-card-article & {
+
+			margin: 8px 0 20px;
+			padding: 12px 50px;
+		}
+		.b-form-selects-fieldset &,
+		.b-form-aside-fieldset & {
+
+			margin: 0  0 -49px;
+			padding: 12px 30px;
+			width: 66px;
+			color: #000;
+			@include PFDinDisplayPro-Light(20px, 24px);
+			cursor: pointer;
+		}
+		.b-form-aside-fieldset & {
+			
+			margin: 8px 0 0;
+		}
 		&-entity {
 
 			@include PFDinDisplayPro-Light(20px, 24px);
+			width: 100%;
 			border: 0;
+
+			.b-form-wide-fieldset &,
+			.b-form-aside-fieldset & {
+
+				text-align: center;
+				@include placeholder {
+					text-transform: uppercase;
+					@include PFDinDisplayPro-Light(16px, 19px);
+				}
+			}
+			.b-form-selects-fieldset & {
+
+				margin: 0 0 0 11px;
+				height: 50px;
+				opacity: 0;
+			}
 		}
 		.b-form-error-fieldset & {
 			
@@ -587,8 +668,45 @@ a, a:hover {
 			}
 		}
 	}
-}
+	&-selects-fieldset {
 
+		margin: 0 0 16px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	&-fieldset-separator {
+
+		position: relative;
+		&:after {
+
+			position: absolute;
+			content: "/";
+			top: 10px;
+			right: -29px;
+			@include PFDinDisplayPro(22px, normal);
+			color: #fff;	
+		}
+	}
+	&-aside-fieldset {
+
+		position: relative;
+		@extend .b-form-selects-fieldset;
+		margin: 0 0 0 169px;
+
+		&-paragraph {
+
+			position: absolute;
+			left: 0;
+			bottom: -56px;
+			width: 170px;
+			@include PFDinDisplayPro(16px, normal);
+		}
+	}
+	&-center-fieldset {
+
+		text-align: center;
+	}
+}
 .b-button {
 
 	display: inline-block;
@@ -612,7 +730,6 @@ a, a:hover {
 		text-align: left;
 		vertical-align: middle;
 	}
-
 	.b-authorization-article &,
 	.b-wrong-password-article &,
 	.b-phone-approved-article &, 
@@ -622,20 +739,21 @@ a, a:hover {
 		margin: 0 32px 0 0;
 		width: 218px;
 	}
-
 	.b-payment-success-article & {
 
 		margin: 0;
 		width: 162px;
 	}
-
 	.b-wrong-password-article &,
 	.b-phone-approved-article & {
 
 		box-shadow: none;
 	}
-}
+	.b-payment-card-article & {
 
+		margin: 0;
+	}
+}
 .b-form-pass-section {
 
 	display: inline-block;
@@ -661,6 +779,12 @@ a, a:hover {
 			text-decoration: underline;
 		}
 	}
+}
+.b-payment-card-article {
+
+	margin: 0 auto;
+	padding: 0;
+	width: 808px;
 }
 
 	
