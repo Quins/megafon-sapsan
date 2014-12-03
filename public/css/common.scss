@@ -174,32 +174,29 @@ a, a:hover {
 	display: inline-block;
 	width: 100%;
 	box-sizing: border-box;
+	text-align: right;
 	padding: 0 0 0 443px;
 	margin: 0 0 0 -443px;
 
 	&-clause {
 
 		display: inline-block;
+		@include PFDinDisplayPro(14px, 40px);
+		text-transform: uppercase;
+		padding: 0 0 0 30px;
 
 		&-link {
 
-			.b-primary-menu-phone-clause & {
+			color: #fff;
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
 
-				color: #fff;
-				text-decoration: none;
-				border-bottom: 1px solid transparent;
+			&:hover {
 
-				&:hover {
-
-					border-bottom-color: #fff;
-				}
+				border-bottom-color: #fff;
 			}
 
 			.b-primary-menu-backward-clause & {
-
-				color: #fff;
-				text-decoration: none;
-				border-bottom: 1px solid transparent;
 
 				&:before {
 
@@ -213,27 +210,23 @@ a, a:hover {
 					margin: -23px 0 0;
 					@include graphics(-5px, -335px);
 				}
-
-				&:hover {
-
-					border-bottom-color: #fff;
-				}
 			}
 		}
 	}
 
 	&-phone-clause {
 
-		@include PFDinDisplayPro(14px, 40px);
+		float: left;
+		padding: 0;
 		color: #fff;
 	}
 
 	&-backward-clause {
 
-		float: right;
 		@include PFDinDisplayPro(22px, 40px);
 		text-transform: uppercase;
 		color: #fff;
+		padding: 0;
 		position: relative;
 	}
 
@@ -254,7 +247,6 @@ a, a:hover {
 .b-article {
 
 	@extend .l-header;
-	position: relative;
 	padding: 0 0 0 300px;
 	box-sizing: border-box;
 	@include PFDinDisplayPro(14px, 16px);
@@ -345,6 +337,7 @@ a, a:hover {
 
 			padding: 0 180px 35px 0;
 		}
+
 	}
 
 	&-contents {
@@ -410,6 +403,97 @@ a, a:hover {
 
 			display: inline-block;
 			@include PFDinDisplayPro-Light(25px, 30px);
+		}
+	}
+}
+
+.b-landing-article {
+
+	@extend .l-header;
+	color: #fff;
+	@include PFDinDisplayPro(14px, 16px);
+
+	&-title {
+
+		text-align: center;
+		text-transform: uppercase;
+		width: 500px;
+		margin: 0 auto;
+		padding: 0 0 85px;
+		@include Font(60px, 72px);
+	}
+
+	&-menu {
+
+		display: block;
+		text-align: center;
+		margin: 0 -35px;
+		@include Font(0,0);
+
+		&-clause {
+
+			display: inline-block;
+			vertical-align: top;
+			width: 220px;
+			padding: 0 35px;
+
+			&-link {
+
+				display: block;
+				text-decoration: none;
+				color: #fff;
+			}
+
+			&-description {
+
+				display: block;
+				width: 130px;
+				height: 130px;
+				margin: 0 auto 35px;
+				border-radius: 65px;
+				background: #00985f;
+				line-height: 130px;
+				text-align: center;
+
+				&-title {
+
+					display: inline-block;
+					vertical-align: middle;
+					margin: 5px 0 0;
+					@include Font(34px, 40px);
+				}
+
+				&-contents {
+
+					display: inline-block;
+					vertical-align: middle;
+					@include Font(20px, 20px);
+					padding: 15px 0 0 5px;
+				}
+
+				.b-landing-article-menu-scretch-clause & {
+
+					position: relative;
+
+					&:before {
+
+						content: "";
+						display: block;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: 64px;
+						height: 43px;
+						margin: -21px 0 0 -32px;
+						@include graphics(-11px, -214px);
+					}
+				}
+			}
+
+			&-title {
+
+				@include Font(29px, 35px);
+			}
 		}
 	}
 }

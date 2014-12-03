@@ -3,13 +3,25 @@
 	<h1 class="b-logo b-megafon-logo"><a <%- partial("_href", {page : pages.main}) %> class="b-logo-link">&laquo;Мегафон&raquo; &mdash; официальный интернет-провайдер поездов &laquo;Сапсан&raquo;</a></h1>
 	<span class="b-logo b-rzd-logo"><a href="#" class="b-logo-link">&laquo;Российские железные дороги&raquo;</a></span>
 	<ul class="b-primary-menu g-cleared">
-		<li class="b-primary-menu-clause b-primary-menu-phone-clause">
-			<a href="tel:88005509434" class="b-primary-menu-clause-link">8&nbsp;800&nbsp;550&nbsp;94&nbsp;34</a>
-		</li>
-		<% if (["index", "wrong-password", "no-money"].indexOf(current.source) < 0) { %>
-		<li class="b-primary-menu-clause b-primary-menu-backward-clause">
-			<a href="#" onclick="history.go(-2);" class="b-primary-menu-clause-link">Назад</a>
-		</li>
+		<% if (["main"].indexOf(current.source) < 0) { %>
+			<li class="b-primary-menu-clause b-primary-menu-phone-clause">
+				<a href="tel:88005509434" class="b-primary-menu-clause-link">8&nbsp;800&nbsp;550&nbsp;94&nbsp;34</a>
+			</li>
+			<% if (["index", "wrong-password", "no-money"].indexOf(current.source) < 0) { %>
+			<li class="b-primary-menu-clause b-primary-menu-backward-clause">
+				<a href="#" onclick="history.go(-2);" class="b-primary-menu-clause-link">Назад</a>
+			</li>
+			<% } %>
+		<% } else { %>
+			<li class="b-primary-menu-clause">
+				<a <%- partial("_href", {page : pages.auth}) %> class="b-primary-menu-clause-link">Ввести логин и пароль</a>
+			</li>
+			<li class="b-primary-menu-clause">
+				<a href="http://rzd.ru" target="_blank" class="b-primary-menu-clause-link">Перейти на сайт РЖД</a>
+			</li>
+			<li class="b-primary-menu-clause">
+				<a <%- partial("_href", {page : pages.main_en}) %> class="b-primary-menu-clause-link">English</a>
+			</li>
 		<% } %>
 	</ul>
 </header>
