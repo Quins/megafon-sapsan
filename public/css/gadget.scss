@@ -17,134 +17,74 @@ input::-webkit-inner-spin-button {
 	}
 }
 
-.b-article {
-
-	@include mq(1000) {
-
-		margin: 0 auto;
-		padding: 0;
-		max-width: 620px;
-	}
-	@include mq(680) {
-
-		max-width: 320px;
-	}
-	
-	&-title {
-
-		@include mq(1000) {
-
-			@include Font(50px, 50px);
-
-			&:before {
-
-				left: -178px;
-				width: 140px;
-				height: 140px;
-			}
-			&:after {
-
-				left: -144px;
-				top: 6px;
-			}
-		}
-
-		@include mq(680) {
-
-			margin-top: 100px !important;
-			@include Font(38px, 38px);
-			&:before {
-
-				top: -160px;
-				left: 50%;
-				margin-left: -70px;
-				width: 140px;
-				height: 140px;
-			}
-			&:after {
-
-	 			top: -125px;
-				left: 50%;
-				margin-left: -33px;
-			}
-		}
-		
-		.b-scretch-card-article &,
-		.b-authorization-article &,
-		.b-wrong-password-article &,
-		.b-payment-card-article &,
-		.b-phone-approved-article &,
-		.b-payment-impossible-article & {
-			
-			@include mq(1000) {
-				
-				margin: 0 0 0 180px;
-				padding: 0 0px 35px 0;
-			}
-			@include mq(680) {
-				
-				margin: 0;
-			}
-		}
-		.b-buy-internet-article & {
-
-			@include mq(1000) {
-				margin: 0 0 0 180px;
-				padding: 0 0 8px;
-			}
-			@include mq(680) {
-				
-				margin: 0;
-			}
-		}
-	}
-	&-costs-section {
-
-		@include mq(1000) {
-			
-			top: 14px;
-			left: 22px;
-		}
-		@include mq(680) {
-			
-			top: -115px;
-			left: 112px;
-		}
-	}
-	&-contents {
-
-		&-paragraph {
-
-			@include mq(1000) {
-
-				margin: 0 0 0 180px;
-
-			}
-
-			@include mq(680) {
-				
-				margin: 0;
-				@include Font(26px, normal);
-			}
-			.b-buy-internet-article & {
-
-				@include mq(680) {
-					padding: 0 0 15px;
-				}
-			}
-		}
-	}
-}
-
 @include mq(860) {
 
+.l-header {
+
+	padding: 20px 20px 40px;
+}
+
 .b-article {
 
+	padding: 0 20px 80px;
+
 	&-title {
+
+		&:before {
+
+			position: static;
+			display: block;
+			width: 120px;
+			height: 120px;
+			margin: 0 0 20px;
+		}
+
+		&:after {
+
+			display: block;
+			margin: 27px 22px;
+			top: 0;
+			left: 0;
+		}
+
+		.b-phone-approved-article &, 
+		.b-authorization-article &, 
+		.b-wrong-password-article &, 
+		.b-scretch-card-article & {
+
+			padding: 0 0 10px;
+		}
 
 		.b-payment-card-article & {
 
 			padding: 0 20px 10px;
+		}
+	}
+
+	&-costs-section {
+
+		width: 120px;
+		text-align: center;
+		line-height: 120px;
+		top: 0;
+		left: 20px;
+		margin: 5px 0 0;
+
+		&-title {
+
+			@include Font(30px, 40px);
+		}
+
+		&-description {
+
+			@include Font(20px, 25px);
+		}
+	}
+
+	&-contents {
+
+		p, &-paragraph {
+
 		}
 	}
 
@@ -161,9 +101,60 @@ input::-webkit-inner-spin-button {
 
 	width: auto;
 	padding: 0 0 80px;
+	max-width: none;
+
+	.b-article-title {
+
+		margin: 0;
+	}
 }
 
 .b-form {
+
+	&-field {
+
+		width: 100%;
+		padding: 12px 30px;
+		margin: 15px 0 20px;
+	}
+
+	&-field-error {
+
+		position: relative;
+		width: auto;
+		top: auto;
+		right: auto;
+		margin: 0 0 20px;
+		padding: 0;
+		line-height: 40px;
+
+		&:before {
+
+			position: static;
+			width: 40px;
+			height: 40px;
+			vertical-align: middle;
+			display: inline-block;
+			border-radius: 20px;
+			background: #EA2121;
+			text-align: center;
+			line-height: 40px;
+			margin: 0 10px 0 0;
+		}
+
+		&:after {
+
+			content: none;
+			display: none;
+		}
+	}
+
+	&-pass-section {
+
+		display: block;
+		width: auto;
+		text-align: left;
+	}
 
 	&.b-card-form {
 
@@ -240,6 +231,22 @@ input::-webkit-inner-spin-button {
 	&-phone-clause {
 
 		float: none;
+	}
+}
+
+.b-article {
+
+	&-title {
+
+		@include Font(38px, 38px);
+	}
+
+	&-contents {
+
+		&-paragraph {
+
+			@include Font(26px, normal);
+		}
 	}
 }
 
@@ -369,8 +376,6 @@ input::-webkit-inner-spin-button {
 
 		@include mq(680) {
 			
-			margin: 15px 0 20px;
-			padding: 10px 50px;
 		}
 		&-entity {
 			
@@ -402,20 +407,6 @@ input::-webkit-inner-spin-button {
 			@include Font(17px, 20px);
 		}
 
-	}
-	&-pass-section { 
-		
-		@include mq(680) {
-			width: 100%;
-			text-align: center;
-		}
-		&-link {
-
-			@include mq(680) {
-				@include Font(18px, 22px);
-
-			}
-		}
 	}
 }
 
@@ -496,6 +487,29 @@ input::-webkit-inner-spin-button {
 }
 
 @include mq(480) {
+
+.b-article {
+
+	&-title {
+
+		&:before {
+
+			margin: 0 auto 20px;
+		}
+
+		&:after {
+
+			margin: 27px -38px;
+			left: 50%;
+		}
+	}
+
+	&-costs-section {
+
+		left: 50%;
+		margin: 5px -60px 0;
+	}
+}
 
 .b-primary-menu {
 
