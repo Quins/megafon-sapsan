@@ -94,8 +94,9 @@ a, a:hover {
 
 	position: relative;
 	margin: 0 auto;
-	padding: 18px 40px 90px 20px;
-	width: 1024px;
+	padding: 20px 40px 90px 20px;
+	max-width: 1024px;
+	min-width: 320px;
 	min-height: 46px;
 	box-sizing: border-box;
 	@include Font(0,0);
@@ -439,7 +440,7 @@ a, a:hover {
 
 		text-align: center;
 		text-transform: uppercase;
-		width: 500px;
+		max-width: 500px;
 		margin: 0 auto;
 		padding: 0 0 85px;
 		@include Font(60px, 72px);

@@ -1,4 +1,5 @@
 @import "_tools";
+@import "_fonts";
 @import "_variables";
 
 @media (min-width: $max-gadget + 1px)  { 
@@ -7,4 +8,148 @@
 
 		display: none !important;
 	}
+}
+
+@include mq(780) {
+
+.l-header {
+
+	text-align: center;
+	padding: 20px 0 40px;
+}
+
+.b-logo {
+
+	margin: 0 40px;
+}
+
+.b-primary-menu {
+
+	display: block;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+	&-clause {
+
+		padding: 0 15px;
+		white-space: nowrap;
+	}
+
+	&-phone-clause {
+
+		float: none;
+	}
+}
+
+.b-landing-article {
+
+	padding: 20px 0 80px;
+
+	&-title {
+
+		@include Font(50px, 60px);
+		padding: 0 0 40px;
+	}
+
+	&-menu {
+
+		margin: 0;
+
+		&-clause {
+
+			width: 160px;
+			padding: 0 20px 20px;
+
+			&-description {
+
+				margin: 0 auto 15px;
+			}
+
+			&-title {
+
+				@include Font(18px, 20px);
+			}
+		}
+	}
+}
+
+}
+
+@include mq(600) {
+
+.b-logo {
+
+	height: 40px;
+	margin: 0 20px -40px;
+
+	&.b-megafon-logo {
+
+		width: 40px;
+		float: left;
+
+		&:before {
+
+			width: 40px;
+			height: 40px;
+			margin: -20px 0 0;
+			background: url(../i/logo-megafon-compact.png) 0 0 no-repeat;
+		}
+	}
+
+	&.b-rzd-logo {
+
+		width: 70px;
+		float: right;
+
+		&:before {
+
+			width: 70px;
+			height: 30px;
+			margin: -15px 0 0;
+			background: url(../i/logo-rzd-compact.png) 0 0 no-repeat;
+		}
+	}
+}
+
+.b-primary-menu {
+
+	padding: 0 120px;
+}
+
+}
+
+@include mq(480) {
+
+.b-primary-menu {
+
+	padding: 60px 0 0;
+}
+
+.b-landing-article {
+
+	&-title {
+
+		@include Font(30px, 40px);
+		padding: 0 0 20px;
+	}
+
+	&-menu {
+
+
+		&-clause {
+
+
+			&-description {
+
+			}
+
+			&-title {
+
+				@include Font(14px, 16px);
+			}
+		}
+	}
+}
+
 }
