@@ -1,13 +1,13 @@
 {
 	"globals": {
 		"project": {
-			"title": "WiFi от Мегафон в Сапсане"
+			"title": "WiFi от МегаФон в Сапсане"
 		},
 		"pages": {
 
 			"main": {
 
-				"title": "Wi-Fi от Мегафон в Сапсане",
+				"title": "Wi-Fi от МегаФон в Сапсане",
 				"template": "main",
 				"navigation": "primary"
 			}, 
