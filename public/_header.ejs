@@ -7,11 +7,6 @@
 			<li class="b-primary-menu-clause b-primary-menu-phone-clause">
 				<a href="tel:88005509434" class="b-primary-menu-clause-link">8&nbsp;800&nbsp;550&nbsp;94&nbsp;34</a>
 			</li>
-			<% if (["index", "wrong-password", "no-money"].indexOf(current.source) < 0) { %>
-			<li class="b-primary-menu-clause b-primary-menu-backward-clause">
-				<a href="#" onclick="history.go(-2);" class="b-primary-menu-clause-link">Назад</a>
-			</li>
-			<% } %>
 		<% } else { %>
 			<li class="b-primary-menu-clause">
 				<a <%- partial("_href", {page : pages.auth}) %> class="b-primary-menu-clause-link">Ввести логин и пароль</a>
