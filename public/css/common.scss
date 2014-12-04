@@ -87,7 +87,7 @@ a, a:hover {
 	position: relative;
 	margin: 0 auto;
 	padding: 18px 40px 90px 20px;
-	width: 1024px;
+	max-width: 1024px;
 	min-height: 46px;
 	@include Font(0,0);
 }
@@ -321,24 +321,10 @@ a, a:hover {
 			
 			padding: 0;
 		}
-		.b-autorization-article &,
-		.b-wrong-password-article &,
-		.b-scretch-card-article & {
-			
-			padding: 0 380px 35px 0;
-		}
-		.b-phone-aprove-article & {
 
-			padding: 0 180px 35px 0;	
-		}
-
-		.b-buy-internet-article & {
-			
-			padding: 0;
-		}
-
+		.b-scretch-card-article &,
 		.b-authorization-article &,
-		.b-wrong-password-article & {
+		.b-wrong-password-article &  {
 			
 			padding: 0 380px 35px 0;
 		}
@@ -589,6 +575,7 @@ a, a:hover {
 
 			display: inline-block;
 			margin: 35px 26px 40px 0;
+			padding: 17px 50px;
 		}
 
 		.b-payment-card-article & {
@@ -789,6 +776,32 @@ a, a:hover {
 		background: transparent url('../i/banking-card.png') no-repeat 0 0;
 		position: relative;
 	}
+	&-pass-section {
+
+	display: inline-block;
+	margin: 0;
+	width: 195px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	overflow: hidden;
+
+		&-link {
+
+			display: inline-block;
+			@include PFDinDisplayPro(21px, 26px);
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+			vertical-align: middle;
+			color: #00B269;
+
+			&:hover {
+
+				text-decoration: underline;
+			}
+		}
+	}
 }
 .b-button {
 
@@ -835,32 +848,6 @@ a, a:hover {
 	.b-payment-card-article & {
 
 		margin: 0;
-	}
-}
-.b-form-pass-section {
-
-	display: inline-block;
-	margin: 0;
-	width: 195px;
-	height: 60px;
-	line-height: 60px;
-	text-align: center;
-	overflow: hidden;
-
-	.b-form-pass-section-link {
-
-		display: inline-block;
-		@include PFDinDisplayPro(21px, 26px);
-		text-align: left;
-		text-decoration: none;
-		text-transform: uppercase;
-		vertical-align: middle;
-		color: #00B269;
-
-		&:hover {
-
-			text-decoration: underline;
-		}
 	}
 }
 
