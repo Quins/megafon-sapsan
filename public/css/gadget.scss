@@ -2,12 +2,94 @@
 @import "_fonts";
 @import "_variables";
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 @media (min-width: $max-gadget + 1px)  { 
 
 	.g-portable {
 
 		display: none !important;
 	}
+}
+
+@include mq(860) {
+
+.b-article {
+
+	&-title {
+
+		.b-payment-card-article & {
+
+			padding: 0 20px 10px;
+		}
+	}
+
+	&-description {
+
+		.b-payment-card-article & {
+
+			padding: 0 20px 50px;
+		}
+	}
+}
+
+.b-payment-card-article {
+
+	width: auto;
+	padding: 0 0 80px;
+}
+
+.b-form {
+
+	&.b-card-form {
+
+		margin: 0 20px;
+		padding: 20px;
+		background: #aaa;
+		background: rgba(255,255,255,.2);
+		border-radius: 10px;
+
+		& .b-form-fieldset {
+
+			width: 100%;
+		}
+
+		& .b-form-validity-fieldset {
+
+			box-sizing: border-box;
+			padding: 0 240px 0 0;
+			margin: 0 -200px 0 0;
+			float: left;
+		}
+
+		& .b-form-cvv-fieldset {
+
+			position: relative;
+			top: auto;
+			left: auto;
+			margin: 0;
+			width: 200px;
+			float: left;
+		}
+
+		& .b-form-cardholder-fieldset {
+
+			clear: both;
+		}
+
+		& .b-form-submit-fieldset {
+
+			padding: 0;
+			margin: 25px 0 0;
+		}
+	}
+}
+
 }
 
 @include mq(780) {
@@ -74,6 +156,74 @@
 	}
 }
 
+.b-form {
+
+	&-field {
+
+		.b-payment-card-article & {
+
+			padding: 7px 20px;
+		}
+
+		&-entity {
+
+			.b-form-validity-fieldset & {
+
+				height: 40px;
+			}
+		}
+	}
+
+	&.b-card-form {
+
+		& .b-form-validity-fieldset {
+
+			box-sizing: border-box;
+			padding: 0 180px 0 0;
+			margin: 0 -140px 0 0;
+			float: left;
+		}
+
+		& .b-form-cvv-fieldset {
+
+			width: 140px;
+
+			&-paragraph {
+
+				font-size: 12px;
+			}
+		}
+	}
+
+	&-select-field {
+
+		height: 40px;
+	}
+}
+
+.b-card-form {
+
+	.b-form-month-field {
+
+		width: 40%;
+		margin: 8px 0 20px;
+		float: left;
+
+		&:after {
+			
+			width: 50%;
+			right: -50%;
+			line-height: 40px;
+		}
+	}
+
+	.b-form-year-field {
+
+		width: 40%;
+		float: right;
+	}
+}
+
 }
 
 @include mq(600) {
@@ -117,6 +267,39 @@
 	padding: 0 120px;
 }
 
+.b-form {
+
+	&.b-card-form {
+
+		& .b-form-validity-fieldset {
+
+			padding: 0;
+			margin: 0;
+		}
+
+		& .b-form-cvv-fieldset {
+
+			width: 100%;
+
+			& .b-form-field {
+
+				float: left;
+				width: 120px;
+			}
+
+			&-paragraph {
+
+				float: left;
+				box-sizing: border-box;
+				width: 100%;
+				max-width: 280px;
+				padding: 0 0 0 140px;
+				margin: 8px 0 0 -120px;
+			}
+		}
+	}
+}
+
 }
 
 @include mq(480) {
@@ -149,6 +332,29 @@
 				@include Font(14px, 16px);
 			}
 		}
+	}
+}
+
+.b-card-form {
+
+	.b-form-month-field {
+
+		width: 46%;
+		margin: 8px 0 20px;
+		float: left;
+
+		&:after {
+			
+			width: 18%;
+			right: -18%;
+			line-height: 40px;
+		}
+	}
+
+	.b-form-year-field {
+
+		width: 46%;
+		float: right;
 	}
 }
 
