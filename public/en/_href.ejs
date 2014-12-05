@@ -1,0 +1,5 @@
+<% if (page !== undefined) { %>
+href="<%= (environment == "production" ? "./" : "") %><%= page.template %><%= (environment == "production" ? ".html" : "") %>"
+<% } else { %>
+href="#"
+<% } %>

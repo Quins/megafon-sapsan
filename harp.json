@@ -106,6 +106,126 @@
 				"template": "404",
 				"title": "Страница не найдена", 
 				"navigation": "errors"
+			}, 
+
+			"en/main": {
+
+				"title": "Megafon Wi-Fi on Sapsan train",
+				"template": "main",
+				"prefix": "en", 
+				"navigation": "en/primary"
+			}, 
+			"en/notime": {
+
+				"template": "time-expired",
+				"title": "Confirmation time expired", 
+				"prefix": "en", 
+				"navigation": "en/errors"
+			}, 
+			"en/nomoney": {
+
+				"template": "no-money",
+				"title": "Not enough money", 
+				"prefix": "en", 
+				"navigation": "en/errors"
+			}, 
+			"en/buy5h": {
+
+				"template": "buy-internet-5h",
+				"title": "Buy Megafon internet for 5 hours", 
+				"prefix": "en", 
+				"navigation": "en/payment"
+			}, 
+			"en/buy90min": {
+
+				"template": "buy-internet-90min",
+				"title": "Buy Megafon internet for 90 minutes", 
+				"prefix": "en", 
+				"navigation": "en/payment"
+			}, 
+			"en/card5h": {
+
+				"template": "payment-card-5h",
+				"title": "Pay with banking card for 5 hours", 
+				"prefix": "en", 
+				"navigation": "en/payment"
+			},
+			"en/card90m": {
+
+				"template": "payment-card-90m",
+				"title": "Pay with banking card for 90 minutes", 
+				"prefix": "en", 
+				"navigation": "en/payment"
+			}, 
+			"en/success5h": {
+
+				"template": "payment-successful-5h",
+				"title": "Payment successful (5 hours)", 
+				"prefix": "en", 
+				"navigation": "en/success"
+			}, 
+			"en/success90min": {
+
+				"template": "payment-successful-90min",
+				"title": "Payment successdul (90 minutes)", 
+				"prefix": "en", 
+				"navigation": "en/success"
+			},
+			"en/scretchsuccess": {
+
+				"template": "scretch-card-activated",
+				"title": "Scretch card activated", 
+				"prefix": "en", 
+				"navigation": "en/success"
+			}, 
+			"en/auth": {
+
+				"template": "authorization",
+				"title": "Authentication", 
+				"prefix": "en", 
+				"navigation": "en/authorization"
+			}, 
+			"en/authfailed": {
+
+				"template": "wrong-password",
+				"title": "Incorrect password", 
+				"prefix": "en", 
+				"navigation": "en/errors"
+			}, 
+			"en/authphone": {
+
+				"template": "phone-approved",
+				"title": "Phone number confirmation", 
+				"prefix": "en", 
+				"navigation": "en/authorization"
+			}, 
+			"en/noconnection": {
+
+				"template": "disconnected",
+				"title": "No internet connection", 
+				"prefix": "en", 
+				"navigation": "en/errors"
+			}, 
+			"en/noapproval": {
+
+				"template": "payment-impossible",
+				"title": "Can't confirm payment", 
+				"prefix": "en", 
+				"navigation": "en/errors"
+			}, 
+			"en/scretch": {
+
+				"template": "scretch-card",
+				"title": "Activate your scretch-card", 
+				"prefix": "en", 
+				"navigation": "en/payment"
+			}, 
+			"en/404": {
+
+				"template": "404",
+				"title": "Page not found", 
+				"prefix": "en", 
+				"navigation": "en/errors"
 			}
 
 		}

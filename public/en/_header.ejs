@@ -1,0 +1,32 @@
+<% function page(source) { %>
+	<% var returnname = false; %>
+	<% for (var name in pages) { %>
+		<% if (pages.hasOwnProperty(name)) { %>
+			<% if (pages[name].template === source) returnname = name; %>
+		<% } %>
+	<% } %>
+	<% return returnname; %>
+<% } %>
+
+<header class="l-header">
+	
+	<h1 class="b-logo b-megafon-logo"><a <%- partial("_href", {page : pages["en/main"]}) %> class="b-logo-link">&laquo;Мегафон&raquo; &mdash; официальный интернет-провайдер поездов &laquo;Сапсан&raquo;</a></h1>
+	<span class="b-logo b-rzd-logo"><a href="#" class="b-logo-link">&laquo;Russian railways&raquo;</a></span>
+	<ul class="b-primary-menu g-cleared">
+		<% if (["main"].indexOf(current.source) < 0) { %>
+			<li class="b-primary-menu-clause b-primary-menu-phone-clause">
+				<a href="tel:88005509434" class="b-primary-menu-clause-link">8&nbsp;800&nbsp;550&nbsp;94&nbsp;34</a>
+			</li>
+		<% } else { %>
+			<li class="b-primary-menu-clause">
+				<a <%- partial("_href", {page : pages["en/auth"]}) %> class="b-primary-menu-clause-link">Authenticate</a>
+			</li>
+			<li class="b-primary-menu-clause">
+				<a href="http://rzd.ru" target="_blank" class="b-primary-menu-clause-link">Russian railways website</a>
+			</li>
+		<% } %>
+			<li class="b-primary-menu-clause">
+				<a href="<%= (environment == "production" ? "./" : "/") + current.source + (environment == "production" ? ".html" : "") %>" class="b-primary-menu-clause-link">Русский</a>
+			</li>
+	</ul>
+</header>

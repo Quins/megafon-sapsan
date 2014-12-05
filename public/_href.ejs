@@ -1,5 +1,5 @@
 <% if (page !== undefined) { %>
-href="<%= (environment == "production" ? "./" : "") %><%= page.template %><%= (environment == "production" ? ".html" : "") %>"
+href="<%= (environment == "production" ? "./" : "/") %><%= (page.prefix === undefined ? "" : page.prefix + "/") %><%= page.template %><%= (environment == "production" ? ".html" : "") %>"
 <% } else { %>
 href="#"
 <% } %>

@@ -1,0 +1,22 @@
+<article class="b-article b-authorization-article">
+	<h2 class="b-article-title">Ввести логин и пароль</h2>
+	<form action="#" class="b-form">
+		<fieldset class="b-form-fieldset">
+			<label class="b-form-fieldset-title">Если вы уже оплатили интернет, введите логин и пароль, полученный в СМС</label>
+			<div class="b-form-field">
+				<input type="tel" class="b-form-field-entity" id="authorization-form-phone" placeholder="+7 926 265 72 62">
+			</div>
+			<div class="b-form-field">
+				<input type="password" class="b-form-field-entity" id="authorization-form-pass" placeholder="Введите пароль">
+			</div>
+		</fieldset>
+		<fieldset class="b-form-fieldset">
+			<a <%- partial("_href", {page : pages.authfailed}) %> class="b-button" title=Подтвердить данные>
+				<span class="b-button-inside">Подтвердить данные</span>
+			</a>
+			<span class="b-form-pass-section" >
+				<a href="#" class="b-form-pass-section-link" title="Получить пароль еще раз">Получить пароль еще раз</a>
+			</span>
+		</fieldset>
+	</form>
+</article>

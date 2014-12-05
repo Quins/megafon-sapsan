@@ -14,9 +14,9 @@
 			<li class="b-primary-menu-clause">
 				<a href="http://rzd.ru" target="_blank" class="b-primary-menu-clause-link">Перейти на сайт РЖД</a>
 			</li>
-			<li class="b-primary-menu-clause">
-				<a <%- partial("_href", {page : pages.main_en}) %> class="b-primary-menu-clause-link">English</a>
-			</li>
 		<% } %>
+			<li class="b-primary-menu-clause">
+				<a href="<%= (environment == "production" ? "./en/" : "/en/") + current.source + (environment == "production" ? ".html" : "") %>" class="b-primary-menu-clause-link">English</a>
+			</li>
 	</ul>
 </header>
