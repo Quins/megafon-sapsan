@@ -191,7 +191,7 @@ a, a:hover {
 	&-clause {
 
 		display: inline-block;
-		@include PFDinDisplayPro(14px, 40px);
+		@include OpenSans(14px, 40px);
 		text-transform: uppercase;
 		padding: 0 0 0 30px;
 
@@ -233,7 +233,7 @@ a, a:hover {
 
 	&-backward-clause {
 
-		@include PFDinDisplayPro(22px, 40px);
+		@include OpenSans(22px, 40px);
 		text-transform: uppercase;
 		color: #fff;
 		padding: 0;
@@ -260,14 +260,14 @@ a, a:hover {
 	@extend .l-header;
 	padding: 0 0 0 300px;
 	box-sizing: border-box;
-	@include PFDinDisplayPro(14px, 16px);
+	@include BaseFont(14px, 16px);
 	color: #fff;
 
 	&-title {
 
 		position: relative;
 		padding: 0 0 37px 0;
-		@include Font(60px, 60px);
+		@include OpenSans(60px, 60px);
 
 		&:before {
 
@@ -405,13 +405,13 @@ a, a:hover {
 		&-title {
 
 			display: inline-block;
-			@include PFDinDisplayPro-Light(41px, 50px);
+			@include OpenSans(41px, 50px);
 		}
 
 		&-description {
 
 			display: inline-block;
-			@include PFDinDisplayPro-Light(25px, 30px);
+			@include OpenSans(25px, 30px);
 		}
 	}
 }
@@ -420,7 +420,7 @@ a, a:hover {
 
 	@extend .l-header;
 	color: #fff;
-	@include PFDinDisplayPro(14px, 16px);
+	@include BaseFont(14px, 16px);
 
 	&-title {
 
@@ -429,7 +429,7 @@ a, a:hover {
 		max-width: 500px;
 		margin: 0 auto;
 		padding: 0 0 85px;
-		@include Font(60px, 72px);
+		@include OpenSans(60px, 72px);
 	}
 
 	&-menu {
@@ -469,7 +469,7 @@ a, a:hover {
 					display: inline-block;
 					vertical-align: middle;
 					margin: 5px 0 0;
-					@include Font(34px, 40px);
+					@include OpenSans(34px, 40px);
 				}
 
 				&-contents {
@@ -501,7 +501,7 @@ a, a:hover {
 
 			&-title {
 
-				@include Font(29px, 35px);
+				@include OpenSans(29px, 35px);
 			}
 		}
 	}
@@ -521,7 +521,7 @@ a, a:hover {
 		position: relative;
 		&-title {
 
-			@include PFDinDisplayPro(24px, 29px);
+			@include OpenSans(24px, 29px);
 
 			.b-authorization-article & {
 
@@ -566,7 +566,7 @@ a, a:hover {
 			display: block;
 			color: #000;
 			text-align: center;
-			@include PFDinDisplayPro-Light(20px, 26px);
+			@include OpenSans(20px, 26px);
 			&:after {
 
 				position: absolute;
@@ -596,7 +596,7 @@ a, a:hover {
 
 		&-entity {
 
-			@include PFDinDisplayPro-Light(20px, 24px);
+			@include BaseFont(20px, 24px);
 			width: 100%;
 			border: 0;
 
@@ -614,20 +614,20 @@ a, a:hover {
 
 			.b-form-cardnumber-fieldset & {
 
-				@include PFDinDisplayPro-Light(20px, normal);
+				@include BaseFont(20px, normal);
 				text-align: center;
 			}
 
 			.b-form-cardholder-fieldset & {
 
-				@include PFDinDisplayPro-Light(20px, normal);
+				@include BaseFont(20px, normal);
 				text-transform: uppercase;
 				text-align: center;
 			}
 
 			.b-form-cvv-fieldset & {
 
-				@include PFDinDisplayPro-Light(20px, normal);
+				@include BaseFont(20px, normal);
 				text-align: center;
 			}
 		}
@@ -682,7 +682,7 @@ a, a:hover {
 			text-align: center;
 			top: 0;
 			right: -90px;
-			@include PFDinDisplayPro(22px, 50px);
+			@include BaseFont(22px, 50px);
 			color: #fff;
 		}
 
@@ -712,7 +712,7 @@ a, a:hover {
 		top: 59px;
 		right: 132px;
 		width: 215px;
-		@include PFDinDisplayPro-Light(20px, normal);
+		@include BaseFont(20px, normal);
 		&:after {
 
 			position: absolute;
@@ -732,7 +732,7 @@ a, a:hover {
 			top: 14px;
 			left: -43px;
 			color: #fff;
-			@include PFDinDisplayPro-Medium(20px, normal);
+			@include BaseFont(20px, normal);
 			z-index: 13;
 		}
 		.b-form-error-fieldset & {
@@ -742,7 +742,7 @@ a, a:hover {
 	}
 	&-law-description {
 
-		@include PFDinDisplayPro(19px, 23px);
+		@include BaseFont(19px, 23px);
 
 		&-link {
 
@@ -776,7 +776,7 @@ a, a:hover {
 		&-paragraph {
 
 			display: block;
-			@include PFDinDisplayPro(16px, normal);
+			@include BaseFont(16px, normal);
 		}
 	}
 
@@ -800,7 +800,7 @@ a, a:hover {
 		&-link {
 
 			display: inline-block;
-			@include PFDinDisplayPro(21px, 26px);
+			@include BaseFont(21px, 26px);
 			text-align: left;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -833,7 +833,7 @@ a, a:hover {
 	&-inside {
 
 		display: inline-block;
-		@include PFDinDisplayPro(19px, 22px);
+		@include BaseFont(16px, 18px);
 		text-align: left;
 		vertical-align: middle;
 	}

@@ -3,28 +3,6 @@
 /*@font-face {
 	
 	font: {
-		family: "FontName";
-		weight: 100;
-		style: normal;
-	}
-	src: url("../fonts/FontName/regular.eot");
-	src: url("../fonts/FontName/regular.eot?#iefix") format("embedded-opentype"),
-		 url("../fonts/FontName/regular.woff") format("woff"),
-		 url("../fonts/FontName/regular.ttf") format("truetype");
-}
-
-@mixin FontNameRegular($font-size, $line-height) {
-
-	font-family: "FontName", Arial, sans-serif;
-	font-weight: 100;
-	font-size: $font-size;
-	line-height: $line-height;
-}*/
-
-
-@font-face {
-	
-	font: {
 		family: "PFDinDisplayPro";
 		weight: 400;
 		style: normal;
@@ -33,7 +11,7 @@
 	src: url("../fonts/PFDinDisplayPro/regular.eot?#iefix") format("embedded-opentype"),
 		 url("../fonts/PFDinDisplayPro/regular.woff") format("woff"),
 		 url("../fonts/PFDinDisplayPro/regular.ttf") format("truetype"),
-		 url('../fonts/PFDinDisplayPro/regular.svg#Rotonda') format('svg');
+		 url('../fonts/PFDinDisplayPro/regular.svg#PFDinDisplayPro') format('svg');
 }
 
 @mixin PFDinDisplayPro($font-size, $line-height) {
@@ -55,7 +33,7 @@
 	src: url("../fonts/PFDinDisplayPro/medium.eot?#iefix") format("embedded-opentype"),
 		 url("../fonts/PFDinDisplayPro/medium.woff") format("woff"),
 		 url("../fonts/PFDinDisplayPro/medium.ttf") format("truetype"),
-		 url('../fonts/PFDinDisplayPro/medium.svg#Rotonda-Bold') format('svg');
+		 url('../fonts/PFDinDisplayPro/medium.svg#PFDinDisplayPro-Medium') format('svg');
 }
 
 @mixin PFDinDisplayPro-Medium($font-size, $line-height) {
@@ -77,7 +55,7 @@
 	src: url("../fonts/PFDinDisplayPro/light.eot?#iefix") format("embedded-opentype"),
 		 url("../fonts/PFDinDisplayPro/light.woff") format("woff"),
 		 url("../fonts/PFDinDisplayPro/light.ttf") format("truetype"),
-		 url('../fonts/PFDinDisplayPro/light.svg#Rotonda-Bold') format('svg');
+		 url('../fonts/PFDinDisplayPro/light.svg#PFDinDisplayPro-Light') format('svg');
 }
 
 @mixin PFDinDisplayPro-Light($font-size, $line-height) {
@@ -99,7 +77,7 @@
 	src: url("../fonts/PFDinDisplayPro/extra-thin.eot?#iefix") format("embedded-opentype"),
 		 url("../fonts/PFDinDisplayPro/extra-thin.woff") format("woff"),
 		 url("../fonts/PFDinDisplayPro/extra-thin.ttf") format("truetype"),
-		 url('../fonts/PFDinDisplayPro/extra-thin.svg#Rotonda-Bold') format('svg');
+		 url('../fonts/PFDinDisplayPro/extra-thin.svg#PFDinDisplayPro-Thin') format('svg');
 }
 
 @mixin PFDinDisplayPro-ExtraThin($font-size, $line-height) {
@@ -108,11 +86,33 @@
 	font-weight: 100;
 	font-size: $font-size;
 	line-height: $line-height;
+}*/
+
+@font-face {
+	
+	font: {
+		family: "OpenSans";
+		weight: 400;
+		style: normal;
+	}
+	src: url("../fonts/OpenSans/opensans-regular.eot");
+	src: url("../fonts/OpenSans/opensans-regular.eot?#iefix") format("embedded-opentype"),
+		 url("../fonts/OpenSans/opensans-regular.woff") format("woff"),
+		 url("../fonts/OpenSans/opensans-regular.ttf") format("truetype"),
+		 url('../fonts/OpenSans/opensans-regular.svg#OpenSans') format('svg');
+}
+
+@mixin OpenSans($font-size, $line-height) {
+
+	font-family: "OpenSans", Arial, sans-serif;
+	font-weight: 400;
+	font-size: $font-size;
+	line-height: $line-height;
 }
 
 @mixin BaseFont($font-size, $line-height) {
 
-	font-family: "Helvetica", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	font-weight: normal;
 	font-size: $font-size;
 	line-height: $line-height;
