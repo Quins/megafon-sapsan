@@ -400,7 +400,9 @@ a, a:hover {
 
 		position: absolute;
 		top: 23px;
-		left: 109px;
+		left: 80px;
+		text-align: center;
+		width: 160px;
 
 		&-title {
 
@@ -861,5 +863,24 @@ a, a:hover {
 		margin: 0;
 	}
 }
+
+
+.b-ruble-notice {
+
+	display: inline-block;
+	position: relative;
+	text-transform: uppercase;
+
+	&:after {
+		
+		content: "\2013";
+		display: inline-block;
+		position: absolute;
+		top: 10%;
+		left: 0;
+	}
+}
+
+
 
 	
