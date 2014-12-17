@@ -504,6 +504,18 @@ input::-webkit-inner-spin-button {
 		}
 	}
 
+	&-contents {
+
+		&-paragraph {
+
+			.b-priority-article & {
+
+				padding: 0 20px 30px;
+				@include Font(20px, normal);
+			}
+		}
+	}
+
 	&-costs-section {
 
 		left: 50%;

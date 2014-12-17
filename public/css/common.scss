@@ -373,12 +373,24 @@ a, a:hover {
 				color: #fff;
 				border-bottom-color: #fff;
 			}
+
+			.b-priority-article & {
+
+				display: inline-block;
+				text-transform: none;
+				@include Font(inherit, inherit);
+			}
 		}
 
 		ul, &-collection {
 
 			list-style: disc outside;
 			padding: 0 0 30px 30px;
+		}
+
+		.b-priority-article & {
+
+			text-align: center;
 		}
 	}
 
@@ -536,6 +548,14 @@ a, a:hover {
 				@include Font(20px, normal);
 			}
 		}
+
+		.b-priority-form & {
+
+			display: inline-block;
+			padding: 0 20px 20px;
+			margin: 0;
+			vertical-align: top;
+		}
 	}
 
 	&-submit-fieldset {
@@ -632,10 +652,21 @@ a, a:hover {
 				@include BaseFont(20px, normal);
 				text-align: center;
 			}
+
+			.b-priority-form & {
+
+				text-align: center;
+			}
 		}
 		.b-form-error-fieldset & {
 			
 			border: 2px solid #EA2121;
+		}
+
+		.b-priority-form & {
+
+			padding: 17px 30px;
+			margin: 0;
 		}
 	}
 
@@ -815,6 +846,11 @@ a, a:hover {
 			}
 		}
 	}
+	&.b-priority-form {
+
+		@include Font(0,0);
+		text-align: center;
+	}
 }
 .b-button {
 
@@ -859,6 +895,11 @@ a, a:hover {
 		box-shadow: none;
 	}
 	.b-payment-card-article & {
+
+		margin: 0;
+	}
+
+	.b-priority-form & {
 
 		margin: 0;
 	}
